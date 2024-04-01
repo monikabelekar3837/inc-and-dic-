@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        .theme-icon{
+            height:3opx;
+            width:30px;
+            cursor:pointer;
+            padding:5px;
+            border-radius:5px;
+            background-color: white;
+        }
+
+        .active {
+            border:1px solid #000;
+        }
+
+        .theme-dark{
+            background-color: #000;
+            color: #fff;
+        }
+
+        .theme-light{
+            background-color:aqua;
+            color:#000;
+        }
+    </style>
+</head>
+<body id="body">
+    <div>
+        <img src="/moon.png"class="theme-icon active"
+        id="img-dark"onclick="darkmode()"/>
+
+        <img src="/brightness.png"class="theme-icon"
+        id="img-light"onclick="lightmode()"/>
+
+
+        <h1>
+            This is the Dark/light mode theme changer
+        </h1>
+
+        <p>
+        I am monika.My college name is parikrama college of enggineering kashti.
+        </p>
+    </div>
+
+    <script>
+        function darkmode(){
+        const imgDark = document.getElementById('img-dark');
+        imgDark.classList.add('active');
+
+        const imgLight = document.getElementById('img-dark');
+        imgLight.classList.remove('active');
+
+        const bodyElement = document.getElementById("body");
+        bodyElement.className = "theme-dark";
+        }
+
+        function lightmode(){
+         const imgDark = document.getElementById('img-dark');
+        imgDark.classList.remove('active');
+
+        const imgLight = document.getElementById('img-dark');
+        imgLight.classList.add('active');
+        
+        const bodyElement = document.getElementById("body");
+        bodyElement.className = "theme-light";
+
+
+        }
+    </script>
+    
+</body>
+</html>
